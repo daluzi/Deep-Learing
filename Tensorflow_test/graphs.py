@@ -15,7 +15,7 @@ product = tf.matmul(m1, m2)
 print(product)
 
 # 定义一个会话，启动默认图
-sess = tf.Session(tf.Graph())
+sess = tf.compat.v1.Session()
 # 调用sess的run方法来执行矩阵乘法op
 # run(product)触发了图中的3个op
 result = sess.run(product)
